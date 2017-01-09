@@ -1,0 +1,466 @@
+body {
+    min-height: 200px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-color: #FFF !important;
+}
+div.cards {
+    /*border: solid 0.5px #AAA;*/
+    border-radius: 5px;
+
+    min-width: 200px;
+    width: 200px;
+    vertical-align: text-top;
+    position: relative;
+    display: inline-block;
+    background-color: #FFF;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+div.cards:active {
+    border: solid 0.5px #66E;
+    box-shadow: 0 0 20px rgba(100, 100, 255, 0.7);
+}
+/*div.cards:hover {
+    background-color: #999;
+}*/
+div.cards > div.mask-container {
+    position: relative;
+    top: -200px;
+    left: -1px;
+    z-index: 999;
+    border-radius: 5px;
+}
+
+div.cards > div.mask-container > div.mask {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
+}
+div.cards > div.mask-container > div.mask:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+div.cards > div.mask-container > div.mask:active {
+    background-color: rgba(100, 100, 255, 0.7);
+}
+
+div.cards > .cards-content {
+    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+div.cards > img.cards-image-top {
+    height: calc(270px + 20px);
+    padding-bottom: 0px;
+    width: 100%;
+    display: block;
+    background-color: #AAA;
+    border-radius: 5px;
+}
+div.cards > div.profile-container {
+    text-align: center;
+    position: relative;
+    top: -50px;
+    left: 50px;
+}
+div.cards > div.profile-container > img.profile-image {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 50%;
+}
+/*div.cards > div.profile-container > img.profile-image:active {
+    border: solid 0.5px #66E;
+    box-shadow: 0 0 20px rgba(100, 100, 255, 0.7);
+}*/
+div.cards-container {
+    margin: auto;
+    text-align: center;
+}
+
+div.cards-container > div > div.cards {
+    margin-left: 20px;
+}
+
+div.cards-line-container {
+    margin: auto;
+    padding-right: 20px;
+    text-align: left;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-large {
+    font-size: 1.2em;
+}
+
+.text-larger {
+    font-size: 1.5em;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+span.icon-text {
+    margin-right: 10px;
+}
+
+div.mask > div.hidden-info-bg {
+    margin-top: 1px;
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    width: calc(100% + 0.5px);
+    height: 0%;
+    background-color: rgba(255, 255, 255, 0.7);
+    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.8) , rgba(255, 255, 255, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8) , rgba(255, 255, 255, 0)); /* Standard syntax */
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+
+div.mask:hover > div.hidden-info-bg {
+    opacity: 1;
+    height: 100%;
+}
+
+div.mask > div.hidden-info-bg > div.info-container {
+    position: absolute;
+    white-space: normal;
+    bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+div.carousel-inner > div.item > img{
+    height: 250px;
+    width: 400px;
+    margin: auto;
+}
+
+.carousel-control-custom {
+    position: absolute;
+    top: 50px !important;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    background-image: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+div.main-container {
+    position: relative;
+    top: -50px;
+    height: 100%;
+}
+
+.carousel {
+    background-color: #CCC;
+    overflow: hidden;
+    padding-top: 45px;
+}
+
+div.mask-all-active {
+    background-color: rgba(0, 0, 0, 0.35);
+    height: calc(100% - 50px);
+    width: 100%;
+    position: fixed;
+    top: 65px;
+    left: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    z-index: 1500;
+
+    -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.5s; /* Firefox < 16 */
+        -ms-animation: fadein 0.5s; /* Internet Explorer */
+         -o-animation: fadein 0.5s; /* Opera < 12.1 */
+            animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/**/
+
+.custom-text {
+    font-size: 3em;
+}
+
+.custom-text:hover {
+    color: #77A;
+}
+
+.custom-text:active {
+    color: #339;
+}
+
+.favourite-text:hover {
+    color: #FE0;
+}
+
+div.detail-pane {
+    background-color: #FFF;
+    width: 600px;
+    overflow: scroll;
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+    div.detail-pane {
+        width: 100%;
+    }
+
+    div.detail-pane > .row > * > img.poster-image {
+        margin: auto;
+    }
+
+    div.detail-pane > .row > div.description {
+        padding-top: 20px;
+    }
+}
+
+div.detail-pane > .row {
+    padding-bottom: 20px;
+}
+
+div.detail-pane > .row > * > img.profile-image {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+div.detail-pane > .row > * > img.poster-image {
+    height: 400px;
+    width: 250px;
+    display: block;
+}
+
+div.detail-pane > .row > div.description {}
+
+/*
+max height is 300px;
+max width is 405px;
+*/
+
+.slide-inner {
+    height: 300px; /*Corespond to height1*/
+    width: 405px; /*Corespond to width1*/
+}
+
+.slider {
+    height: 300px; /*Corespond to height1*/
+    padding: 3px;
+    width: 100%;
+}
+
+.slider-container {
+    width: 75%;
+    min-width: 768px;
+    margin: auto;
+}
+
+.slider-super-container {
+    background-color: #F1F1F1;
+    padding-top: 20px;
+    position: relative;
+    top: 45px
+}
+
+.slick-slide > div > a > img {
+    height: calc(70% - 10px);
+    width: calc(70% - 10px) !important;
+    top: calc(15%);
+    margin: auto;
+    opacity: 0.7 !important;
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+    z-index: 1000;
+}
+
+.slick-active > div > a > img {
+    height: calc(90% - 10px);
+    width: calc(90% - 10px) !important;
+    top: calc(5%);
+    opacity: 0.8 !important;
+    margin: auto;
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+    z-index: 1001;
+}
+
+.slick-current {
+    padding-bottom: 15px;
+}
+
+.slick-current > div > a > img {
+    opacity: 1 !important;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px) !important;
+    top: calc(0%);
+    margin: auto;
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+    z-index: 1002;
+}
+
+.slide-inner > a > img {
+    position: relative;
+    height: calc(100%);
+    width: calc(100%);
+    border-radius: 5px;
+}
+
+.slick-dots {
+    bottom: 0px !important;
+}
+
+.main-container > div > div.container {
+    padding-top: 20px;
+}
+
+
+.inline {
+    display: inline-block;
+}
+
+.margin-right-15 {
+    margin-right: 15px;
+}
+
+.slick-slide > div > a > p.carousel-description {
+    opacity: 0;
+}
+
+.slick-current > div > a {
+    text-decoration: none;
+}
+
+.slick-current > div > a > p.carousel-description {
+    position: relative;
+    top: -70px;
+    left: 0;
+    z-index: 1003;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    top: 0px;
+    background-color: #FFF;
+    height: 65px;
+    padding-top: 7px;
+}
+
+.navbar > div.container {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar-selected {
+    background-color: #F1F1F1;
+}
+
+.navbar-header > button {
+    z-index: 2000;
+    color: #000;
+    border: 0.5px #EEE solid;
+    position: relative;
+    left: -10px;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #000 !important;
+}
+
+.navbar-fixed-top .navbar-collapse {
+    background-color: #F9F9F9 !important;
+}
+
+.slick-arrow {
+    color: #000 !important;
+}
+
+.navbar-brand {
+    margin-left: 10px;
+}
+
+.favourite-page-body {
+    background-color: #F1F1F1 !important;
+    padding-top: 30px;
+    height: 120%;
+}
+
+.background-gray {
+    background-color: #F1F1F1 !important;
+}
