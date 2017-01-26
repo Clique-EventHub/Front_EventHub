@@ -58,7 +58,7 @@ export default class CarouselTop extends Component {
         var renderedObject = <div></div>;
         console.log(this.state.width);
         if(this.state.width >= 768) {
-            renderedObject = <SlickCarousel imageList={this.props.imageList} onmouseover={consoleLog()} />;
+            renderedObject = <SlickCarousel imageList={this.props.imageList} />;
         } else {
             renderedObject = <BootstrapCarousel imageList={this.props.imageList} />;
         }

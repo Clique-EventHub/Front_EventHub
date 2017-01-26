@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import EventDetail from './eventDetail';
+import EventDetail from '../containers/eventDetail';
 import ReactDOM from 'react-dom';
 
 export default class CardListItem extends Component {
@@ -17,6 +17,10 @@ export default class CardListItem extends Component {
         //EventDetail
         //<EventDetail eventData={this.props.card} />
         this.setState({'isClicked': true});
+
+        // $('#myContent').removeClass('blur-out');
+        // $('#myContent').addClass('blur-in');
+
         //console.log(this.state.isClicked)
         //var domChild = '<div class="mask-all-active"><div class="text-right" onClick="hideDetail()"><span class="glyphicon glyphicon-remove custom-text" aria-hidden="true"></span></div><div class="detail-pane text-left"><div class="row"><div class="col-xs-8"><img src="./resource/img/event-icon/iCon-09.jpeg" class="profile-image" />Channel name</div><div class="col-xs-4 text-right"><span class="glyphicon glyphicon-star text-larger favourite-text" aria-hidden="true"></span></div></div><div class="row"><div class="col-sm-6"><img src="./resource/img/test-poster/00.jpg" class="poster-image" /></div><div class="col-sm-6 description"><p>Test</p><p>Hello There</p><p>Something</p></div></div></div></div>';
         //$('.mask-all-container').append(domChild);
@@ -25,6 +29,9 @@ export default class CardListItem extends Component {
 
     handleExit() {
         this.setState({'isClicked': false});
+
+        // $('#myContent').removeClass('blur-in');
+        // $('#myContent').addClass('blur-out');
     }
 
     componentWillMount() {
