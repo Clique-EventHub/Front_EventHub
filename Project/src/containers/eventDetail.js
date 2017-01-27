@@ -13,7 +13,6 @@ class EventDetail extends Component {
         super(props);
 
         // this.props.id = "";
-        
         this.props.getEvent("5881d45d2d9ae35708911f05"); //working
     }
 
