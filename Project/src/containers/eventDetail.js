@@ -13,7 +13,7 @@ class EventDetail extends Component {
         super(props);
 
         // this.props.id = "";
-        //this.props.getEvent("5881d45d2d9ae35708911f05"); //working
+        this.props.getEvent("5881d45d2d9ae35708911f05"); //working
     }
 
     componentWillMount() {
@@ -25,18 +25,18 @@ class EventDetail extends Component {
     render() {
         var tmpObj;
 
-        if(typeof(this.props.eventData.profile) != "undefined") {
+        if(typeof(this.props.getEventObject) != "undefined") {
             tmpObj = (
                 <Link to="/channel" className="col-xs-8">
-                    <img src={this.props.eventData.profile} className="profile-image" />
-                    Channel name
+                    <img src={this.props.getEventObject.event.picture} className="profile-image" />
+                    {this.props.getEventObject.event.title}
                 </Link>
             );
         } else {
             tmpObj = (
                 <Link to="/channel" className="col-xs-8">
                     <img src="./resource/img/event-icon/iCon-09.jpeg" className="profile-image" />
-                    Channel name
+                    Channel name (Undefined)
                 </Link>
             );
         }
@@ -52,12 +52,15 @@ class EventDetail extends Component {
                     </div>
                     <div className="row">
                         <div className="col-sm-6">
-                            <img src={this.props.eventData.poster} className="poster-image" />
+                            <img src={this.props.getEventObject.event["picture_large"]} className="poster-image" />
                         </div>
                         <div className="col-sm-6 description">
-                            <p>{this.props.eventData.title}</p>
-                            <p>{this.props.eventData.date}</p>
-                            <p>Something<br />Something<br />Something<br />Something<br />Something<br />Something<br />Something</p>
+                            <h1>{this.props.getEventObject.event.title}</h1>
+                            <p>What : {this.props.getEventObject.event.about}</p>
+                            <p>Where : {this.props.getEventObject.event.location}</p>
+                            <p>When : {this.props.getEventObject.event.date_start} to {this.props.getEventObject.event.date_end}</p>
+                            <p>Contact : {this.props.getEventObject.event.contact_information}</p>
+
                         </div>
                     </div>
                 </div>
